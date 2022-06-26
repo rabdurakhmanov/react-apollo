@@ -1,10 +1,10 @@
-# Build
-/dist
+.eslintcache
 
-# Libraries
 /.yarn/cache
 /.yarn/install-state.gz
-/node_modules
 
-# Caches
-.eslintcache
+/build
+
+/coverage
+
+/node_modules

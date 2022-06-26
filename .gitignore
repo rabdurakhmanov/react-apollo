@@ -1,21 +1,24 @@
-# Environment variables
+.DS_Store
+
 .env.development.local
 .env.local
 .env.production.local
 .env.test.local
 
-# Build
-/dist
-
-# Libraries
-/.yarn/cache
-/.yarn/install-state.gz
-/node_modules
-
-# Caches
 .eslintcache
 
-# Logs
+/.idea
+/.vscode
+
+/.yarn/cache
+/.yarn/install-state.gz
+
+/build
+
+/coverage
+
+/node_modules
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
