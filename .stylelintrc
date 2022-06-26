@@ -1,0 +1,9 @@
+{
+    "customSyntax": "postcss-scss",
+    "extends": [
+        "stylelint-config-recommended",
+        "stylelint-config-recommended-scss",
+        "stylelint-config-prettier"
+    ],
+    "plugins": ["stylelint-scss", "stylelint-prettier"]
+}

@@ -1,21 +1,19 @@
-import {
-  ApolloClient, ApolloProvider, InMemoryCache
-} from "@apollo/client";
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.scss";
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
-  cache: new InMemoryCache()
+    uri: "https://48p1r2roz4.sse.codesandbox.io",
+    cache: new InMemoryCache()
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <ApolloProvider client={client}>
+            <App />
+        </ApolloProvider>
+    </React.StrictMode>,
+    document.getElementById("root")
 );

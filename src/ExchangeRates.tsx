@@ -1,31 +1,35 @@
 import { gql, useQuery } from "@apollo/client";
-import React from 'react';
+import map from "lodash/map";
 
 const EXCHANGE_RATES = gql`
-  query GetExchangeRates {
-    rates(currency: "USD") {
-      currency
-      rate
+    query GetExchangeRates {
+        rates(currency: "USD") {
+            currency
+            rate
+        }
     }
-  }
 `;
 
 export function ExchangeRates() {
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+    const { loading, error, data } = useQuery(EXCHANGE_RATES);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
-  if (error) {
-    return <p>Error :(</p>;
-  }
+    if (error) {
+        return <p>Error :(</p>;
+    }
 
-  return data.rates.map(({ currency, rate }: { currency: any, rate: any }) => (
-    <div key={currency}>
-      <p>
-        {currency}: {rate}
-      </p>
-    </div>
-  ));
+    return (
+        <>
+            {map(data.rates, ({ currency, rate }) => (
+                <div key={currency}>
+                    <p>
+                        {currency}: {rate}
+                    </p>
+                </div>
+            ))}
+        </>
+    );
 }

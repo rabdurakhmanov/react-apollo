@@ -1,14 +1,12 @@
-import React from 'react';
-import './App.css';
-import { ExchangeRates } from './ExchangeRates';
+import { ExchangeRates } from "./ExchangeRates";
 
 function App() {
-  return (
-    <div>
-      <h2>My first Apollo app 🚀</h2>
-      <ExchangeRates />
-    </div>
-  );
+    return (
+        <div>
+            <h2>My first Apollo app 🚀</h2>
+            <ExchangeRates />
+        </div>
+    );
 }
 
 export default App;

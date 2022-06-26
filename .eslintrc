@@ -1,23 +1,42 @@
 {
-  "root": true,
-  "env": {
-    "browser": true
-  },
-  "extends": [
-    "react-app",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:compat/recommended",
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:sonarjs/recommended"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "allowReserved": false,
-    "ecmaFeatures": {
-      "globalReturn": false,
-      "impliedStrict": true
-    }
-  }
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:compat/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:jest/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:lodash/recommended",
+        "plugin:sonarjs/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "allowReserved": false,
+        "ecmaFeatures": {
+            "globalReturn": false,
+            "impliedStrict": true,
+            "jsx": true
+        },
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "compat",
+        "import",
+        "jest",
+        "jsx-a11y",
+        "lodash",
+        "prettier",
+        "sonarjs"
+    ],
+    "root": true
 }

@@ -1,3 +1,10 @@
 {
-  "src/**/*.{j,t}s": ["eslint --cache --fix", "prettier --write"]
+    "*.scss": [
+        "stylelint --fix",
+        "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+        "eslint --fix",
+        "prettier --write"
+    ]
 }
